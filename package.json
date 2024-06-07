@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "epub-gen": "^0.1.0",
+    "jsdom": "^24.1.0"
+  }
+}
