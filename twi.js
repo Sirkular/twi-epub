@@ -28,7 +28,9 @@ const scrape = async () => {
     url = doc.querySelector('.nav-next').children[0]?.href;
     if (!url) break;
 
+    //  epub-gen attempts to fetch images extremely quickly and can hit rate limiting, scrub images
     doc.querySelector('.entry-content').querySelectorAll("a").forEach(e => e.remove());
+    doc.querySelector('.entry-content').querySelectorAll("img").forEach(e => e.remove());
 
     content.push({
       title: doc.querySelector('.entry-title').textContent,
