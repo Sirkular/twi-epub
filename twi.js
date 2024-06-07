@@ -27,6 +27,9 @@ const scrape = async () => {
     // Grab the next chapter's URL.
     url = doc.querySelector('.nav-next').children[0]?.href;
     if (!url) break;
+
+    doc.querySelector('.entry-content').querySelectorAll("a").forEach(e => e.remove());
+
     content.push({
       title: doc.querySelector('.entry-title').textContent,
       data: doc.querySelector('.entry-content').innerHTML,
