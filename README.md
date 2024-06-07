@@ -15,6 +15,7 @@ yarn install
 ### Usage
 
 ```
+// Grab every chapter from the first to the latest.
 node twi.js
 // or
 NODE_TLS_REJECT_UNAUTHORIZED=0 node twi.js
